@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de la viborita</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="tarjeta">
+      <h1>🐍 La viborita</h1>
+      <p>Come las frutas y evita chocar.</p>
+
+      <p class="marcador">Puntaje: <span id="puntaje">0</span></p>
+
+      <!-- Aquí JavaScript dibuja el tablero y la viborita. -->
+      <canvas
+        id="tablero"
+        width="400"
+        height="400"
+        aria-label="Tablero del juego de la viborita"
+      ></canvas>
+
+      <p id="mensaje" aria-live="polite">Presiona “Iniciar juego”.</p>
+
+      <button id="iniciar">Iniciar juego</button>
+
+      <!-- Botones para jugar desde el celular. -->
+      <div class="controles" aria-label="Controles de dirección">
+        <button class="arriba" data-direccion="arriba" aria-label="Arriba">
+          ▲
+        </button>
+        <button
+          class="izquierda"
+          data-direccion="izquierda"
+          aria-label="Izquierda"
+        >
+          ◀
+        </button>
+        <button class="abajo" data-direccion="abajo" aria-label="Abajo">
+          ▼
+        </button>
+        <button class="derecha" data-direccion="derecha" aria-label="Derecha">
+          ▶
+        </button>
+      </div>
+
+      <p class="ayuda">
+        Computadora: usa las flechas del teclado.<br />
+        Celular: usa los botones de dirección.
+      </p>
+    </main>
+  </body>
+</html>
